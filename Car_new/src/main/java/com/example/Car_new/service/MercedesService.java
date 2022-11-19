@@ -1,10 +1,11 @@
 package com.example.Car_new.service;
 
 import com.example.Car_new.entity.Mercedes;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Service
 public class MercedesService implements CarDao<Mercedes> {
     private final List<Mercedes> cars = new ArrayList<>();
 
@@ -66,6 +67,7 @@ public class MercedesService implements CarDao<Mercedes> {
         for (Mercedes car : cars)
             if (car.getRegNumber() == regNumber) {
                 cars.remove(car);
+                break;
             }
 
     }

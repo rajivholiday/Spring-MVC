@@ -31,8 +31,8 @@ public class BMWController {
     }
 
     @PutMapping("/{regNumber}")
-    public void updateCar(@PathVariable int regNUmber, @RequestBody BMW bmw) {
-        service.updateCar(regNUmber, bmw);
+    public void updateCar(@PathVariable int regNumber, @RequestBody BMW bmw) {
+        service.updateCar(regNumber, bmw);
     }
 
 

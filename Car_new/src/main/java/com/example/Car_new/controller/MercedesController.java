@@ -30,14 +30,14 @@ public class MercedesController {
         service.createCar(car);
     }
 
-    @PostMapping("/")
-    public void create(@RequestParam int regNumber,
-                       @RequestParam String color,
-                       @RequestParam String engineType,
-                       @RequestParam long milaege) {
-        service.create(regNumber, color, engineType, milaege);
-
-    }
+//    @PostMapping("/")
+//    public void create(@RequestParam int regNumber,
+//                       @RequestParam String color,
+//                       @RequestParam String engineType,
+//                       @RequestParam long milaege) {
+//        service.create(regNumber, color, engineType, milaege);
+//
+//    }
 
     @PutMapping("/regNumber")
     public void update(@PathVariable int regNumber, @RequestBody Mercedes mercedes) {

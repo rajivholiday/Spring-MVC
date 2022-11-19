@@ -30,13 +30,13 @@ public class VolvoController {
         service.createCar(volvo);
     }
 
-    @PostMapping("/create")
-    public void create(@RequestParam int regNumber,
-                       @RequestParam String color,
-                       @RequestParam String engineType,
-                       @RequestParam long mileage) {
-        service.create(regNumber, color, engineType, mileage);
-    }
+//    @PostMapping("/create")
+//    public void create(@RequestParam int regNumber,
+//                       @RequestParam String color,
+//                       @RequestParam String engineType,
+//                       @RequestParam long mileage) {
+//        service.create(regNumber, color, engineType, mileage);
+//    }
 
     @PutMapping("/")
     public void updateCar(@PathVariable int regNumber, @RequestBody Volvo volvo) {

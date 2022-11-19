@@ -67,6 +67,7 @@ public class BMWService implements CarDao<BMW> {
         for (BMW car : cars)
             if (car.getRegNumber() == regNumber) {
                 cars.remove(car);
+                break;
             }
 
     }
