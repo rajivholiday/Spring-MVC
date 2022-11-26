@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR</title>
+</head>
+<body>
+<tr th each="hr: ${HR}">
+    <td th:text="${hr.id}"/>
+    <td th:text="${hr.companyName}"/>
+    <td th:text="${hr.locatedCity}"/>
+
+</tr>
+
+
+</body>
+</html>
