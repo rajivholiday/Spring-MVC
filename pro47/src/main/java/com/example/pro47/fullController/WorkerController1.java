@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @Log4j2
 @Controller
-@RequestMapping("/worker")
+@RequestMapping("/worker/full")
 public class WorkerController1 {
     private final WorkerService service;
 
