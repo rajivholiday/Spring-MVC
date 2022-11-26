@@ -30,7 +30,6 @@ public class HRControllerHTML {
         HR hr = service.getById(id);
         model.addAttribute("hr", hr);
         return "hr_id.html";
-
     }
 
 }

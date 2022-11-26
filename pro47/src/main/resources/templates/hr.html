@@ -7,13 +7,17 @@
     <title>HR</title>
 </head>
 <body>
-<tr th each="hr: ${HR}">
+<tbody>
+<tr style="background-color:violet;">
+    <td>Id</td>
+    <td>Company Name</td>
+    <td>Location</td>
+<tr th:each="hr: ${HR}">
     <td th:text="${hr.id}"/>
     <td th:text="${hr.companyName}"/>
     <td th:text="${hr.locatedCity}"/>
 
 </tr>
-
-
+</tbody>
 </body>
 </html>
