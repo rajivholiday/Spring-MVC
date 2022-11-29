@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creating Users</title>
+</head>
+<body>
+<table border="1">
+<tbody style="background-color:LightGray">
+<tr th:each="us1:${us}">
+  <td th:text="${us1.id}"/>
+  <td th:text="${us1.name}"/>
+  <td th:text="${us1.surname}"/>
+  <td th:text="${us1.age}"/>
+  <td th:text="${us1.email}"/>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
