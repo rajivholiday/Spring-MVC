@@ -8,6 +8,13 @@
 </head>
 <body>
 <table border="1">
+  <thead>
+  <th>Id</th>
+  <th>Name</th>
+  <th>Surname</th>
+  <th>Age</th>
+  <th>Email adress</th>
+  </thead>
 <tbody style="background-color:LightGray">
 <tr th:each="us1:${us}">
   <td th:text="${us1.id}"/>
