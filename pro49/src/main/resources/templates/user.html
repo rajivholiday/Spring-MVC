@@ -7,16 +7,17 @@
     <title>Creating Users</title>
 </head>
 <body>
-<table border="1">
+<table border="1" style="background-color: #D6EEEE;">
+    <h3 style="color:red;text-align:left">List of Users</h3>
     <thead>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Surname</th>
-    <th>Age</th>
-    <th>Email address</th>
+    <th scope="col">Id </th>
+    <th scope="col">Name</th>
+    <th scope="col">Surname</th>
+    <th scope="col">Age</th>
+    <th scope="col">Email address</th>
     </thead>
 
-<tbody style="background-color:LightGray">
+<tbody>
 <tr th:each="userr:${users}">
 <td th:text="${userr.id}"/>
   <td th:text="${userr.name}"/>
