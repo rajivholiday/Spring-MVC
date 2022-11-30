@@ -7,17 +7,21 @@
     <title>HR</title>
 </head>
 <body>
-<tbody>
-<tr style="background-color:violet;">
-    <td>Id</td>
-    <td>Company Name</td>
-    <td>Location</td>
-<tr th:each="hr: ${HR}">
-    <td th:text="${hr.id}"/>
-    <td th:text="${hr.companyName}"/>
-    <td th:text="${hr.locatedCity}"/>
+<table border="1">
+    <thead style="color:red;">
+    <th>Id</th>
+    <th>Company Name</th>
+    <th>City</th>
+    </thead>
+<tbody style="background-color:LightGray;" >
+
+<tr th:each="hr1: ${HR}">
+    <td th:text="${hr1.id}"/>
+    <td th:text="${hr1.companyName}"/>
+    <td th:text="${hr1.locatedCity}"/>
 
 </tr>
 </tbody>
+</table>
 </body>
 </html>

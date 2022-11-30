@@ -9,11 +9,12 @@
 <body>
 Workers
 <table border="1">
+    <thead style="color:green;">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Surname</th>
+    </thead>
     <tbody>
-    <tr style="background color:violet;">
-        <th>Id</th>
-        <th>Name</th>
-        <th>Surname</th>
     <tr style="color:red;width:500%" th:each="worker: ${workers}">
         <td th:text="${worker.id}"/>
         <td th:text="${worker.name}"/>
