@@ -54,4 +54,17 @@ public class UserController {
     public void create(@RequestBody User user) {
         service.create(user);
     }
+
+    @ResponseBody
+    @PutMapping("/{id}")
+    public void update(@PathVariable int id, @RequestBody User user) {
+        service.update(id, user);
+    }
+
+    @ResponseBody
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id) {
+        service.delete(id);
+    }
+
 }
