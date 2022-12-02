@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="pro4_10" />
         <module name="Pro46" />
         <module name="SpringBoot" />
         <module name="Student" />
@@ -14,6 +15,7 @@
         <module name="pro48" />
         <module name="Car_new" />
         <module name="pro47" />
+        <module name="pro4_11" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +24,8 @@
       <module name="pro47" target="17" />
       <module name="pro48" target="17" />
       <module name="pro49" target="17" />
+      <module name="pro4_10" target="17" />
+      <module name="pro4_11" target="17" />
       <module name="SpringBoot" target="15" />
       <module name="Student" target="17" />
     </bytecodeTargetLevel>
@@ -34,6 +38,8 @@
       <module name="pro47" options="-parameters" />
       <module name="pro48" options="-parameters" />
       <module name="pro49" options="-parameters" />
+      <module name="pro4_10" options="-parameters" />
+      <module name="pro4_11" options="-parameters" />
     </option>
   </component>
 </project>
