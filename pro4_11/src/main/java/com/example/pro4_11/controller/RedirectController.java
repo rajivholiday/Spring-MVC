@@ -10,7 +10,6 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class RedirectController {
-
     @GetMapping("/redirect")
     public RedirectView handler(@RequestParam String fruit) {
         if (fruit.equals("apple")) {

@@ -25,12 +25,10 @@ public class OrangeService implements GoodsDao<Orange> {
             }
         return Optional.empty();
     }
-
     @Override
     public List<Orange> getAll() {
        return oranges;
     }
-
     @Override
     public void update(int id, Orange orange) {
         for(Orange org: oranges)
@@ -38,9 +36,7 @@ public class OrangeService implements GoodsDao<Orange> {
                 org.setPrice(orange.getPrice());
                 org.setAmount(orange.getAmount());
             }
-
     }
-
     @Override
     public void delete(int id) {
         for(Orange orange: oranges)
@@ -48,6 +44,5 @@ public class OrangeService implements GoodsDao<Orange> {
                 oranges.remove(orange);
                 break;
             }
-
     }
 }

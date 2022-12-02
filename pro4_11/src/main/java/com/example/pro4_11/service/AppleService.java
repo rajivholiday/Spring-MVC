@@ -11,13 +11,11 @@ import java.util.Optional;
 @Service
 @Log4j2
 public class AppleService implements GoodsDao<Apple>{
-
     private final List<Apple> apples =  new ArrayList<>();
     @Override
     public void create(Apple apple) {
         apples.add(apple);
     }
-
     @Override
     public Optional<Apple> get(int id) {
         for(Apple apple:apples)
@@ -26,7 +24,6 @@ public class AppleService implements GoodsDao<Apple>{
             }
         return Optional.empty();
     }
-
     @Override
     public List<Apple> getAll() {
         return apples;
@@ -41,7 +38,6 @@ public class AppleService implements GoodsDao<Apple>{
                 app.setAmount(apple.getAmount());
             }
     }
-
     @Override
     public void delete(int id) {
         for(Apple apple: apples)

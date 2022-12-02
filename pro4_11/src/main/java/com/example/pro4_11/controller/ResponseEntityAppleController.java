@@ -14,7 +14,6 @@ import java.util.List;
 
 public class ResponseEntityAppleController {
     private final AppleService service;
-
     public ResponseEntityAppleController(AppleService service) {
         this.service = service;
     }
@@ -44,7 +43,4 @@ public class ResponseEntityAppleController {
         service.delete(id);
         return new ResponseEntity<>("Apple was deleted", HttpStatus.OK);
     }
-
-
-
 }

@@ -17,7 +17,6 @@ public class BananaService  implements GoodsDao<Banana>{
         bananas.add(banana);
 
     }
-
     @Override
     public Optional<Banana> get(int id) {
         for(Banana banana:bananas)
@@ -26,12 +25,10 @@ public class BananaService  implements GoodsDao<Banana>{
             }
         return Optional.empty();
     }
-
     @Override
     public List<Banana> getAll() {
         return null;
     }
-
     @Override
     public void update(int id, Banana banana) {
         for(Banana b: bananas)
@@ -41,7 +38,6 @@ public class BananaService  implements GoodsDao<Banana>{
 
             }
     }
-
     @Override
     public void delete(int id) {
         for(Banana b: bananas)

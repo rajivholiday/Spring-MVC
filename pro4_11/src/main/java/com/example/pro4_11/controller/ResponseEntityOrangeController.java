@@ -14,7 +14,6 @@ import java.util.List;
 @RequestMapping("/orange")
 public class ResponseEntityOrangeController {
     private final OrangeService service;
-
     public ResponseEntityOrangeController(OrangeService service) {
         this.service = service;
     }

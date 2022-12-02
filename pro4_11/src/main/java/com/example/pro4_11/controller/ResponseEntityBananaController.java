@@ -14,7 +14,6 @@ import java.util.List;
 @RequestMapping("/banana")
 public class ResponseEntityBananaController {
     private final BananaService service;
-
     public ResponseEntityBananaController(BananaService service) {
         this.service = service;
     }
