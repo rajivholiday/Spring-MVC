@@ -1,8 +1,5 @@
 package com.example.pro4_11.controller;
 
-import com.example.pro4_11.entity.Apple;
-import com.example.pro4_11.entity.Banana;
-import com.example.pro4_11.entity.Orange;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

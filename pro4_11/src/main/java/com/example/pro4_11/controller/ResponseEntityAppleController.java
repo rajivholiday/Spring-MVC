@@ -34,8 +34,8 @@ public class ResponseEntityAppleController {
         return ResponseEntity.ok(apple);
     }
     @PutMapping("/{id}")
-    public  ResponseEntity<String> update(@PathVariable int id){
-        service.delete(id);
+    public  ResponseEntity<String> update(@PathVariable int id, @RequestBody Apple apple){
+        service.update(id,apple);
         return new ResponseEntity<>("Apple was updated", HttpStatus.OK);
     }
     @DeleteMapping("/{id}")

@@ -1,6 +1,5 @@
 package com.example.pro4_11.controller;
 
-import com.example.pro4_11.entity.Apple;
 import com.example.pro4_11.entity.Banana;
 import com.example.pro4_11.service.BananaService;
 import org.springframework.http.HttpStatus;
@@ -36,8 +35,8 @@ public class ResponseEntityBananaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable int id) {
-        service.delete(id);
+    public ResponseEntity<String> update(@PathVariable int id, @RequestBody Banana banana) {
+        service.update(id, banana);
         return new ResponseEntity<>("Banana was updated", HttpStatus.OK);
     }
 
