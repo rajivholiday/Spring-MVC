@@ -2,7 +2,6 @@ package com.example.pro4_11.controller;
 
 import com.example.pro4_11.entity.Seller;
 import com.example.pro4_11.service.SellerService;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
