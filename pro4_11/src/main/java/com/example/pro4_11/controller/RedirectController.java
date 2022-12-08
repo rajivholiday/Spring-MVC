@@ -18,7 +18,6 @@ public class RedirectController {
         if (fruit.equals("orange")) {
             return new RedirectView("/orange");
         }
-        return new RedirectView("/redirect");
+        return new RedirectView("https://www.google.com/");
     }
-
 }

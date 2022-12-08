@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-public interface GoodsDao<T> {
+public interface DAO<T> {
     public void create(T t);
 
     public Optional<T> get(int id);

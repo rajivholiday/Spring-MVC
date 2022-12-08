@@ -26,14 +26,14 @@ public class ResponseEntitySellerController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Seller> getById(@PathVariable int id) {
-        Seller seller = service.getById(id).orElse(new Seller());
+        Seller seller = service.get(id).orElse(new Seller());
         return ResponseEntity.ok(seller);
     }
 
     @PostMapping
     public ResponseEntity<String> create(@RequestBody Seller seller) {
         service.create(seller);
-        return new ResponseEntity<>("Seller was created", HttpStatus.OK);
+        return new ResponseEntity<>("Seller was created", HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")

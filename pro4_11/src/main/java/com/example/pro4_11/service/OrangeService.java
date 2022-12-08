@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Service
 @Log4j2
-public class OrangeService implements GoodsDao<Orange> {
+public class OrangeService implements DAO<Orange> {
     private final List<Orange> oranges = new ArrayList<>();
     @Override
     public void create(Orange orange) {

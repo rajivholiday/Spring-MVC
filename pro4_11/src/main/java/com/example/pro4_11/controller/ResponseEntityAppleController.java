@@ -25,7 +25,7 @@ public class ResponseEntityAppleController {
     @PostMapping()
     public ResponseEntity<String> create(@RequestBody Apple apple){
          service.create(apple);
-         return  new ResponseEntity<>("Apple was created", HttpStatus.OK);
+         return  new ResponseEntity<>("Apple was created", HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")

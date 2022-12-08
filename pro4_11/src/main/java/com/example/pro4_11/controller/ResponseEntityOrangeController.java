@@ -27,7 +27,7 @@ public class ResponseEntityOrangeController {
     @PostMapping()
     public ResponseEntity<String> create(@RequestBody Orange orange) {
         service.create(orange);
-        return new ResponseEntity<>("Orange was created", HttpStatus.OK);
+        return new ResponseEntity<>("Orange was created", HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")

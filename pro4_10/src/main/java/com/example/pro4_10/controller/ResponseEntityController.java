@@ -13,37 +13,47 @@ import java.util.List;
 @RequestMapping("/u")
 public class ResponseEntityController {
     private final UserService service;
+
     public ResponseEntityController(UserService service) {
         this.service = service;
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<User>> handler2(){
+    public ResponseEntity<List<User>> handler2() {
         List<User> all = service.getAll();
-       return  ResponseEntity.ok(all);
+        return ResponseEntity.ok(all);
     }
-    @DeleteMapping ("/{id}")
-    public ResponseEntity<String> handler3(@PathVariable int id){
+
+    @GetMapping("/name")
+    public ResponseEntity<User> getByName(@PathVariable String name) {
+        User u = service.getByName(name).orElse(new User());
+        return ResponseEntity.ok(u);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> handler3(@PathVariable int id) {
         service.delete(id);
         return new ResponseEntity<>("User was deleted", HttpStatus.OK);
     }
+
     @PutMapping("/{id}")
-    public ResponseEntity<String> handler4(@PathVariable int id, @RequestBody User user){
+    public ResponseEntity<String> handler4(@PathVariable int id, @RequestBody User user) {
         service.update(id, user);
         return new ResponseEntity<>("User was updated", HttpStatus.OK);
     }
+
     @PostMapping("/")
-    public ResponseEntity<String> create(@RequestBody User user){
+    public ResponseEntity<String> create(@RequestBody User user) {
         service.create(user);
         return new ResponseEntity<>("User was created", HttpStatus.OK);
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<User> getById(@PathVariable int id){
-       User user = service.getById(id).orElse(new User());
-       return ResponseEntity.ok(user);
+    public ResponseEntity<User> getById(@PathVariable int id) {
+        User user = service.getById(id).orElse(new User());
+        return ResponseEntity.ok(user);
 
     }
-
 
 
 }
