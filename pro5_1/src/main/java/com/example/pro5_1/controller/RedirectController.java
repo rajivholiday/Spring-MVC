@@ -9,22 +9,13 @@ import org.springframework.web.servlet.view.RedirectView;
 @Controller
 
 public class RedirectController {
-    private final AzerbaijanService service;
-
-
-    public RedirectController(AzerbaijanService service) {
-        this.service = service;
-    }
-
     @GetMapping("/getCities")
     public RedirectView handler(@RequestParam String country) {
         return switch (country) {
             case "Azerbaijan" -> new RedirectView("/az");
             case "Turkey" -> new RedirectView("/tr");
             case "Russia" -> new RedirectView("/ru");
-            default -> new RedirectView("az/default");
+            default -> new RedirectView("https://yahoo.com/");
         };
-
-
     }
 }
