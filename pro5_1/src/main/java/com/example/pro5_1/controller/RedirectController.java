@@ -1,6 +1,5 @@
 package com.example.pro5_1.controller;
 
-import com.example.pro5_1.service.AzerbaijanService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

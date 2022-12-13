@@ -2,6 +2,7 @@ package com.example.pro5_1.controller;
 
 import com.example.pro5_1.entity.Azerbaijan;
 import com.example.pro5_1.exceptions.CityNotFoundException;
+import com.example.pro5_1.exceptions.UserNotCreatedException;
 import com.example.pro5_1.service.AzerbaijanService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,12 @@ public class AzerbaijanController {
     }
     @PostMapping
     public ResponseEntity<String> create(@RequestBody Azerbaijan azerbaijan){
-        service.create(azerbaijan);
+        try{
+            service.create(azerbaijan);
+        }
+        catch (Exception e){
+            throw  new UserNotCreatedException();
+        }
         return new ResponseEntity<>("Country was created", HttpStatus.CREATED);
     }
 
