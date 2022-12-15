@@ -1,6 +1,7 @@
 package com.example.pro5_1.service;
 
 import com.example.pro5_1.entity.Azerbaijan;
+import com.example.pro5_1.exceptions.CityNotCreatedException;
 import com.example.pro5_1.exceptions.CityNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +15,14 @@ public class AzerbaijanService implements DAO<Azerbaijan> {
 
     @Override
     public void create(Azerbaijan city) {
-        az_cities.add(city);
-    }
+        for (Azerbaijan az : az_cities)
+            if (az.getId() == 0) {
+                throw new CityNotCreatedException();
+            }
+               else{
+                    az_cities.add(city);
+                }
+            }
 
     @Override
     public List<Azerbaijan> getAll() {
