@@ -14,7 +14,6 @@ public class AzerbaijanService implements DAO<Azerbaijan> {
 
     @Override
     public void create(Azerbaijan city) {
-
         az_cities.add(city);
     }
 

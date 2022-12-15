@@ -11,12 +11,12 @@ import java.util.Optional;
 
 @Service
 public class RussiaService implements DAO<Russia> {
-    private final ArrayList<Russia> ru = new ArrayList<>();
+    private final ArrayList<Russia> ru_cities = new ArrayList<>();
 
     @Override
     public void create(Russia russia) {
         try {
-            ru.add(russia);
+            ru_cities.add(russia);
         } catch (Exception e) {
             throw new CityNotCreatedException();
         }
@@ -24,12 +24,12 @@ public class RussiaService implements DAO<Russia> {
 
     @Override
     public List<Russia> getAll() {
-        return ru;
+        return ru_cities;
     }
 
     @Override
     public Optional<Russia> getById(int id) {
-        for (Russia r : ru)
+        for (Russia r : ru_cities)
             if (r.getId() == id) {
                 return Optional.of(r);
             }
@@ -46,6 +46,6 @@ public class RussiaService implements DAO<Russia> {
     @Override
     public void delete(int id) {
         Russia r = getById(id).orElseThrow(CityNotFoundException::new);
-        ru.remove(r);
+        ru_cities.remove(r);
     }
 }

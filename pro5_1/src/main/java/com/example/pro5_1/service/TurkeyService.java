@@ -11,21 +11,21 @@ import java.util.Optional;
 
 @Service
 public class TurkeyService implements DAO<Turkey> {
-    private final ArrayList<Turkey> tr = new ArrayList<>();
+    private final ArrayList<Turkey> tr_cities = new ArrayList<>();
 
     @Override
     public void create(Turkey turkey) {
-        tr.add(turkey);
+        tr_cities.add(turkey);
     }
 
     @Override
     public List<Turkey> getAll() {
-        return tr;
+        return tr_cities;
     }
 
     @Override
     public Optional<Turkey> getById(int id) {
-        for (Turkey t : tr)
+        for (Turkey t : tr_cities)
             if (t.getId() == id) {
                 return Optional.of(t);
             }
@@ -43,7 +43,7 @@ public class TurkeyService implements DAO<Turkey> {
     @Override
     public void delete(int id) {
         Turkey t = getById(id).orElseThrow(CityNotFoundException::new);
-        tr.remove(t);
+        tr_cities.remove(t);
 
     }
 }
