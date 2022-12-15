@@ -2,7 +2,6 @@ package com.example.pro5_1.service;
 
 import com.example.pro5_1.entity.Azerbaijan;
 import com.example.pro5_1.exceptions.CityNotFoundException;
-import com.example.pro5_1.exceptions.UserNotCreatedException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

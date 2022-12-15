@@ -2,7 +2,7 @@ package com.example.pro5_1.service;
 
 import com.example.pro5_1.entity.Turkey;
 import com.example.pro5_1.exceptions.CityNotFoundException;
-import com.example.pro5_1.exceptions.UserNotCreatedException;
+import com.example.pro5_1.exceptions.CityNotCreatedException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ public class TurkeyService implements DAO<Turkey> {
 
     @Override
     public void update(int id, Turkey turkey) {
-        Turkey t = getById(id).orElseThrow(UserNotCreatedException::new);
+        Turkey t = getById(id).orElseThrow(CityNotCreatedException::new);
         t.setCity(turkey.getCity());
         t.setPopulation(turkey.getPopulation());
 

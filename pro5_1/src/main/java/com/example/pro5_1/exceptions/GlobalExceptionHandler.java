@@ -11,8 +11,8 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(exception, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(UserNotCreatedException.class)
-    public ResponseEntity<Object> handleEx2(UserNotCreatedException exception) {
+    @ExceptionHandler(CityNotCreatedException.class)
+    public ResponseEntity<Object> handleEx2(CityNotCreatedException exception) {
         return new ResponseEntity<>(exception, HttpStatus.NO_CONTENT);
     }
 }

@@ -1,8 +1,8 @@
 package com.example.pro5_1.controller;
 
 import com.example.pro5_1.entity.Azerbaijan;
+import com.example.pro5_1.exceptions.CityNotCreatedException;
 import com.example.pro5_1.exceptions.CityNotFoundException;
-import com.example.pro5_1.exceptions.UserNotCreatedException;
 import com.example.pro5_1.service.AzerbaijanService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -37,16 +37,6 @@ public class AzerbaijanController {
         List<Azerbaijan> all = service.getAll();
         return ResponseEntity.ok(all);
     }
-    @PostMapping
-    public ResponseEntity<String> create(@RequestBody Azerbaijan azerbaijan){
-        try{
-            service.create(azerbaijan);
-        }
-        catch (Exception e){
-            throw  new UserNotCreatedException();
-        }
-        return new ResponseEntity<>("Country was created", HttpStatus.CREATED);
-    }
 
     @GetMapping("/{id}")
     public ResponseEntity<Azerbaijan> getById(@PathVariable int id) {
@@ -54,8 +44,19 @@ public class AzerbaijanController {
         return ResponseEntity.ok(az);
     }
 
+    @PostMapping
+    public ResponseEntity<String> create(@RequestBody Azerbaijan azerbaijan) {
+        try {
+            service.create(azerbaijan);
+        } catch (Exception e) {
+            throw new CityNotCreatedException();
+        }
+        return new ResponseEntity<>("Country was created", HttpStatus.CREATED);
+    }
+
+
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable int id, Azerbaijan az) {
+    public ResponseEntity<String> update(@PathVariable int id, @RequestBody Azerbaijan az) {
         service.update(id, az);
         return new ResponseEntity<>("Country was updated", HttpStatus.OK);
     }
