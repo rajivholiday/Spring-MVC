@@ -24,14 +24,6 @@ public class AzerbaijanController {
         this.service = service;
     }
 
-    @GetMapping("/default")
-    public ModelAndView handlerEx() {
-        log.error("Exception is caught");
-        ModelAndView modelAndView = new ModelAndView("exception");
-        modelAndView.setStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-        return modelAndView;
-    }
-
     @GetMapping
     public ResponseEntity<List<Azerbaijan>> getAll() {
         List<Azerbaijan> all = service.getAll();
@@ -46,12 +38,8 @@ public class AzerbaijanController {
 
     @PostMapping
     public ResponseEntity<String> create(@RequestBody Azerbaijan azerbaijan) {
-        try {
-            service.create(azerbaijan);
-        } catch (Exception e) {
-            throw new CityNotCreatedException();
-        }
-        return new ResponseEntity<>("Country was created", HttpStatus.CREATED);
+        service.create(azerbaijan);
+        return new ResponseEntity<>("City was created", HttpStatus.CREATED);
     }
 
 

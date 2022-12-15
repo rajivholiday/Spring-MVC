@@ -14,12 +14,11 @@ public class RussiaService implements DAO<Russia> {
     private final ArrayList<Russia> ru_cities = new ArrayList<>();
 
     @Override
-    public void create(Russia russia) {
-        try {
-            ru_cities.add(russia);
-        } catch (Exception e) {
+    public void create(Russia city) {
+        if (city.getId() == 0)
             throw new CityNotCreatedException();
-        }
+        else
+            ru_cities.add(city);
     }
 
     @Override

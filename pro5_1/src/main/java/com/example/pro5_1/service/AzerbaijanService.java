@@ -15,14 +15,12 @@ public class AzerbaijanService implements DAO<Azerbaijan> {
 
     @Override
     public void create(Azerbaijan city) {
-        for (Azerbaijan az : az_cities)
-            if (az.getId() == 0) {
-                throw new CityNotCreatedException();
-            }
-               else{
-                    az_cities.add(city);
-                }
-            }
+        if (city.getId() == 0)
+            throw new CityNotCreatedException();
+        else
+            az_cities.add(city);
+
+    }
 
     @Override
     public List<Azerbaijan> getAll() {

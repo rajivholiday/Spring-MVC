@@ -14,8 +14,11 @@ public class TurkeyService implements DAO<Turkey> {
     private final ArrayList<Turkey> tr_cities = new ArrayList<>();
 
     @Override
-    public void create(Turkey turkey) {
-        tr_cities.add(turkey);
+    public void create(Turkey city) {
+        if (city.getId() == 0)
+            throw new CityNotCreatedException();
+        else
+            tr_cities.add(city);
     }
 
     @Override
