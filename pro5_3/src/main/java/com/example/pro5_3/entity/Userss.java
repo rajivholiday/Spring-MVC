@@ -7,15 +7,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class User {
+public class Userss {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
     private String name;
+    @Column
     private String surname;
+    @Column
     private int age;
-    @Column(name = "postal code")
+    @Column(name = "postal_code")
     private String postalCode;
 
 
