@@ -13,7 +13,7 @@ public class RedirectController {
             case null -> new RedirectView("/common");
             case "teacher" -> new RedirectView("/teacher");
             case "student" -> new RedirectView("/student");
-            default -> new RedirectView("https://yahoo.com/");
+            default -> new RedirectView("/default");
         };
     }
 }
