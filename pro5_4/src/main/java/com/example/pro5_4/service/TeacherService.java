@@ -1,6 +1,7 @@
 package com.example.pro5_4.service;
 
 import com.example.pro5_4.entity.Teacher;
+import com.example.pro5_4.exceptions.TeacherNotFound;
 import com.example.pro5_4.repository.TeacherRepo;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
@@ -30,7 +31,7 @@ public class TeacherService {
     }
 
     public  void update(Teacher teacher){
-        Teacher  teacher_from_db = getById(teacher.getId()).orElseThrow();
+        Teacher  teacher_from_db = getById(teacher.getId()).orElseThrow(TeacherNotFound::new);
         teacher_from_db.setName(teacher.getName());
         teacher_from_db.setSurname(teacher.getSurname());
         repo.save(teacher_from_db);

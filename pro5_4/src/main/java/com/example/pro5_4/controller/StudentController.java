@@ -1,6 +1,7 @@
 package com.example.pro5_4.controller;
 
 import com.example.pro5_4.entity.Student;
+import com.example.pro5_4.exceptions.StudentNotFound;
 import com.example.pro5_4.service.StudentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class StudentController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Student> getById(@PathVariable int id) {
-        return ResponseEntity.ok(service.getById(id).orElseThrow());
+        return ResponseEntity.ok(service.getById(id).orElseThrow(StudentNotFound::new));
     }
 
     @PostMapping
