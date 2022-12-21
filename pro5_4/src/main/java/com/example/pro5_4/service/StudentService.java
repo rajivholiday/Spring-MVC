@@ -41,6 +41,6 @@ public class StudentService {
     public void deleteById(int id) {
         repo.deleteById(id);
         log.info("Student with id - {} was deleted", id);
-
     }
+
 }

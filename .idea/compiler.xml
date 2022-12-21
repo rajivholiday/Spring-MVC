@@ -11,6 +11,7 @@
         <module name="pro5_1" />
         <module name="pro5_3" />
         <module name="pro5_4" />
+        <module name="pro5_5" />
         <module name="SpringBoot" />
         <module name="Student" />
         <module name="pro49" />
@@ -34,6 +35,7 @@
       <module name="pro5_1" target="19" />
       <module name="pro5_3" target="19" />
       <module name="pro5_4" target="19" />
+      <module name="pro5_5" target="19" />
       <module name="SpringBoot" target="15" />
       <module name="Student" target="17" />
     </bytecodeTargetLevel>
@@ -52,6 +54,7 @@
       <module name="pro5_1" options="-parameters" />
       <module name="pro5_3" options="-parameters" />
       <module name="pro5_4" options="-parameters" />
+      <module name="pro5_5" options="-parameters" />
     </option>
   </component>
 </project>
