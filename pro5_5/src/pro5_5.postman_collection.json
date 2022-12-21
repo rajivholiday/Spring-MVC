@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "26503de3-3ce4-4bf8-ae75-7bf7b4053f7c",
+		"name": "pro5_5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\":\"Marcus\",\r\n \"surname\":\"Mark\",\r\n \"companyName\":\"Wolkswagen\",\r\n \"salary\":6000.0\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_employee_byId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/emp/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"emp",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 1,\r\n        \"name\": \"Gregory\",\r\n        \"surname\": \"Obrien\",\r\n        \"companyName\": \"Toyota\",\r\n        \"salary\": 5000.0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/emp/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"emp",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
