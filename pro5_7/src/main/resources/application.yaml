@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: raj88
+
+
+
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
+    password: raj88
+    user: postgres
+    baseline-on-migrate: true
+
+
+
+
+
+

@@ -22,6 +22,7 @@
         <module name="pro47" />
         <module name="pro4_11" />
         <module name="Pro46" />
+        <module name="pro5_7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,6 +39,7 @@
       <module name="pro5_4" target="19" />
       <module name="pro5_5" target="19" />
       <module name="pro5_6" target="19" />
+      <module name="pro5_7" target="19" />
       <module name="SpringBoot" target="15" />
       <module name="Student" target="17" />
     </bytecodeTargetLevel>
@@ -58,6 +60,7 @@
       <module name="pro5_4" options="-parameters" />
       <module name="pro5_5" options="-parameters" />
       <module name="pro5_6" options="-parameters" />
+      <module name="pro5_7" options="-parameters" />
     </option>
   </component>
 </project>
