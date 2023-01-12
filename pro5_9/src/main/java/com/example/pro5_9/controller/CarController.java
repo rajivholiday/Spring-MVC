@@ -30,9 +30,9 @@ public class CarController {
     }
 
     @PostMapping
-    public ResponseEntity<Object> create(@RequestBody Car car) {
-        service.create(car);
-        return new ResponseEntity<>("Car was created", HttpStatus.CREATED);
+    public ResponseEntity<Integer> create(@RequestBody Car car) {
+        int i = service.create(car);
+        return ResponseEntity.ok(i);
     }
 
     @PutMapping
@@ -41,7 +41,7 @@ public class CarController {
         return new ResponseEntity<>("Car was updated", HttpStatus.OK);
     }
 
-    @DeleteMapping("/{}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Object> delete(@PathVariable int id) {
         service.delete(id);
         return new ResponseEntity<>("Car was deleted", HttpStatus.OK);

@@ -1,9 +1,9 @@
 package com.example.pro5_9.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.id.factory.internal.IdentityGenerationTypeStrategy;
 
 @Getter
 @Setter
@@ -18,8 +18,9 @@ public class Person {
     @Column
     private String surname;
 
-    @OneToOne(cascade = {CascadeType.ALL})
-    @JoinColumn(name = "c_id", referencedColumnName = "id")
+    @OneToOne(cascade = {CascadeType.ALL}) // 1st creates sub entity , then super entity
+    @JsonIgnore
+    @JoinColumn(name = "c_id", referencedColumnName = "id") // c_d = Person entity column, id = reference column items
     private Car car;
 
 }

@@ -1,6 +1,7 @@
 package com.example.pro5_9.service;
 
 import com.example.pro5_9.entity.Person;
+import com.example.pro5_9.exceptions.NotFoundException;
 import com.example.pro5_9.repository.PersonRepo;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +29,7 @@ public class PersonService {
     }
 
     public void update(Person person) {
-        Person person1 = getById(person.getId()).orElseThrow();
+        Person person1 = getById(person.getId()).orElseThrow(NotFoundException::new);
         person1.setName(person.getName());
         person1.setSurname(person.getSurname());
         repo.save(person1);

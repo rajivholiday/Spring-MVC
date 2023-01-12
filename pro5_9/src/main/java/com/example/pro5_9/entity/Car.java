@@ -1,5 +1,6 @@
 package com.example.pro5_9.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,8 +17,8 @@ public class Car {
     @Column
     private String production_year;
 
-    @OneToOne(mappedBy = "car")
+    @JsonIgnore
+    @OneToOne(mappedBy = "car") // car is the name of the table
     private Person person;
-
 
 }

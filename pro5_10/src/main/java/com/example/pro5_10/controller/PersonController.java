@@ -1,7 +1,8 @@
-package com.example.pro5_9.controller;
+package com.example.pro5_10.controller;
 
-import com.example.pro5_9.entity.Person;
-import com.example.pro5_9.service.PersonService;
+import com.example.pro5_10.entity.Person;
+import com.example.pro5_10.entity.Person_Record;
+import com.example.pro5_10.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -30,8 +31,17 @@ public class PersonController {
 
     @PostMapping
     public ResponseEntity<Integer> create(@RequestBody Person person) {
-        int i = service.create(person);
-        return ResponseEntity.ok(i);
+        return new ResponseEntity<>(service.create1(person), HttpStatus.CREATED);
+    }
+
+    @PostMapping("/2")
+    public ResponseEntity<Integer> create(@RequestBody Person_Record person) {
+        return new ResponseEntity<>(service.create2(person), HttpStatus.CREATED);
+    }
+
+    @PostMapping("/common")
+    public ResponseEntity<Integer> create_common(@RequestBody Person person) {
+        return new ResponseEntity<>(service.common_create(person), HttpStatus.CREATED);
     }
 
     @PutMapping
@@ -45,4 +55,6 @@ public class PersonController {
         service.delete(id);
         return new ResponseEntity<>("Person was deleted", HttpStatus.OK);
     }
+
+
 }
