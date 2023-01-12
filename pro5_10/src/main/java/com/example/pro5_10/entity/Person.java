@@ -23,7 +23,7 @@ public class Person {
                     {@JoinColumn(name = "person_id", referencedColumnName = "id", unique = true)},
             inverseJoinColumns =
                     {@JoinColumn(name = "card_id", referencedColumnName = "id", unique = true)})
-    Medical_Card medical_card;
+    MedicalCard medical_card;
 
 
 }

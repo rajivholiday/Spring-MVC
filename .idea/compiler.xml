@@ -22,6 +22,7 @@
         <module name="Car_new" />
         <module name="pro47" />
         <module name="pro4_11" />
+        <module name="pro5_11" />
         <module name="Pro46" />
         <module name="pro5_7" />
         <module name="pro5_9" />
@@ -38,6 +39,7 @@
       <module name="pro4_12" target="19" />
       <module name="pro5_1" target="19" />
       <module name="pro5_10" target="19" />
+      <module name="pro5_11" target="19" />
       <module name="pro5_3" target="19" />
       <module name="pro5_4" target="19" />
       <module name="pro5_5" target="19" />
@@ -61,6 +63,7 @@
       <module name="pro4_12" options="-parameters" />
       <module name="pro5_1" options="-parameters" />
       <module name="pro5_10" options="-parameters" />
+      <module name="pro5_11" options="-parameters" />
       <module name="pro5_3" options="-parameters" />
       <module name="pro5_4" options="-parameters" />
       <module name="pro5_5" options="-parameters" />

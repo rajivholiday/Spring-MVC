@@ -1,9 +1,9 @@
 package com.example.pro5_10.service;
 
-import com.example.pro5_10.entity.Medical_Card;
+import com.example.pro5_10.entity.MedicalCard;
 import com.example.pro5_10.entity.Person;
-import com.example.pro5_10.entity.Person_Record;
-import com.example.pro5_10.repository.Medical_Card_Repo;
+import com.example.pro5_10.entity.PersonRecord;
+import com.example.pro5_10.repository.MedicalCardRepo;
 import com.example.pro5_10.repository.PersonRepo;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +13,10 @@ import java.util.Optional;
 @Service
 public class PersonService {
     private final PersonRepo repo;
-    private final Medical_Card_Repo card_repo;
-    private final Medical_Card_Service service;
+    private final MedicalCardRepo card_repo;
+    private final MedicalCardService service;
 
-    public PersonService(PersonRepo repo, Medical_Card_Repo card_repo, Medical_Card_Service service) {
+    public PersonService(PersonRepo repo, MedicalCardRepo card_repo, MedicalCardService service) {
         this.repo = repo;
         this.card_repo = card_repo;
         this.service = service;
@@ -43,13 +43,13 @@ public class PersonService {
         return repo.save(person).getId();
     }
 
-    public Integer create2(Person_Record person) {
+    public Integer create2(PersonRecord person) {
         Person p = new Person();
         p.setName(person.name());
         p.setSurname(person.surname());
         p.setSalary(person.salary());
 
-        Medical_Card medical_card = card_repo.findById(person.docId()).orElseThrow();
+        MedicalCard medical_card = card_repo.findById(person.docId()).orElseThrow();
         p.setMedical_card(medical_card);
         return repo.save(p).getId();
     }
