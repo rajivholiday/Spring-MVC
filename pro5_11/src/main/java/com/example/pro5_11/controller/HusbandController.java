@@ -1,7 +1,7 @@
 package com.example.pro5_11.controller;
 
 import com.example.pro5_11.entity.Husband;
-import com.example.pro5_11.exceptions.EntityNotCreated;
+import com.example.pro5_11.exceptions.NoSuchEntityFound;
 import com.example.pro5_11.service.HusbandService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,13 +18,13 @@ public class HusbandController {
     public HusbandController(HusbandService service) {
         this.service = service;
     }
-    @GetMapping
+    @RequestMapping
     public ResponseEntity<List<Husband>> getAll(){
         return ResponseEntity.ok(service.getAll());
     }
     @GetMapping("/{id}")
     public ResponseEntity<Husband> getById(@PathVariable int id){
-        return ResponseEntity.ok(service.getById(id).orElseThrow(EntityNotCreated::new));
+        return ResponseEntity.ok(service.getById(id).orElseThrow(NoSuchEntityFound::new));
     }
     @PostMapping("/common")
     public ResponseEntity<Integer> commonCreate(@RequestBody Husband husband){
@@ -34,12 +34,12 @@ public class HusbandController {
     @PutMapping
     public  ResponseEntity<Object> update(@RequestBody Husband husband){
         service.update(husband);
-        return  new ResponseEntity<>("Husband was updated", HttpStatus.OK);
+        return  new ResponseEntity<>("Entity was updated", HttpStatus.OK);
 
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<Object> delete(@PathVariable int id){
         service.delete(id);
-        return  new ResponseEntity<>("Husband was deleted", HttpStatus.OK);
+        return  new ResponseEntity<>("Entity was deleted", HttpStatus.OK);
     }
 }

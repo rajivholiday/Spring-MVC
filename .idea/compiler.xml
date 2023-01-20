@@ -8,7 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pro4_10" />
+        <module name="pro5_12" />
         <module name="pro5_1" />
+        <module name="pro6_1" />
         <module name="pro5_3" />
         <module name="pro5_4" />
         <module name="pro5_5" />
@@ -40,12 +42,14 @@
       <module name="pro5_1" target="19" />
       <module name="pro5_10" target="19" />
       <module name="pro5_11" target="19" />
+      <module name="pro5_12" target="19" />
       <module name="pro5_3" target="19" />
       <module name="pro5_4" target="19" />
       <module name="pro5_5" target="19" />
       <module name="pro5_6" target="19" />
       <module name="pro5_7" target="19" />
       <module name="pro5_9" target="19" />
+      <module name="pro6_1" target="19" />
       <module name="SpringBoot" target="15" />
       <module name="Student" target="17" />
     </bytecodeTargetLevel>
@@ -64,12 +68,14 @@
       <module name="pro5_1" options="-parameters" />
       <module name="pro5_10" options="-parameters" />
       <module name="pro5_11" options="-parameters" />
+      <module name="pro5_12" options="-parameters" />
       <module name="pro5_3" options="-parameters" />
       <module name="pro5_4" options="-parameters" />
       <module name="pro5_5" options="-parameters" />
       <module name="pro5_6" options="-parameters" />
       <module name="pro5_7" options="-parameters" />
       <module name="pro5_9" options="-parameters" />
+      <module name="pro6_1" options="-parameters" />
     </option>
   </component>
 </project>

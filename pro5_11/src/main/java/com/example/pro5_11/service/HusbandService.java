@@ -1,6 +1,7 @@
 package com.example.pro5_11.service;
 
 import com.example.pro5_11.entity.Husband;
+import com.example.pro5_11.exceptions.EntityNotCreated;
 import com.example.pro5_11.exceptions.NoSuchEntityFound;
 import com.example.pro5_11.repository.HusbandRepo;
 import com.example.pro5_11.repository.WifeRepo;
@@ -44,10 +45,10 @@ public class HusbandService {
         h.setPassNumber(husband.getPassNumber());
         h.setIssueYear(husband.getIssueYear());
 
-        if (husband.getWife() != null && husband.getWife().getId() != null)
-            h.setWife(wifeRepo.findById(husband.getWife().getId()).orElseThrow(NoSuchEntityFound::new));
+        if (husband.getWife() != null && husband.getWife().getId() != null) // wife in db
+            h.setWife(wifeRepo.findById(husband.getWife().getId()).orElseThrow(EntityNotCreated::new));
         else
-            h.setWife(husband.getWife());
+            h.setWife(husband.getWife()); // creates new wife
         return repo.save(h).getId();
     }
     public  void delete(int id){

@@ -25,7 +25,7 @@ public class Husband {
     inverseJoinColumns =
     {@JoinColumn(name = "wife_id", referencedColumnName = "id", unique = true)})
 
-    Wife wife;
+    private Wife wife;
 
 
 

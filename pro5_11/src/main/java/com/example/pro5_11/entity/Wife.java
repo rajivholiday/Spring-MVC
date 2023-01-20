@@ -21,7 +21,7 @@ public class Wife {
     private int issueYear;
 
     @OneToOne(mappedBy = "wife")
-    Husband husband;
+   private Husband husband;
 
 
 }

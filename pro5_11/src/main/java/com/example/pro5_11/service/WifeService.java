@@ -1,8 +1,7 @@
 package com.example.pro5_11.service;
 
-import com.example.pro5_11.entity.Husband;
 import com.example.pro5_11.entity.Wife;
-import com.example.pro5_11.repository.HusbandRepo;
+import com.example.pro5_11.exceptions.NoSuchEntityFound;
 import com.example.pro5_11.repository.WifeRepo;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +27,7 @@ public class WifeService {
     }
 
     public void update(Wife wife) {
-        Wife w = getById(wife.getId()).orElseThrow();
+        Wife w = getById(wife.getId()).orElseThrow(NoSuchEntityFound::new);
         w.setName(wife.getName());
         w.setSurname(wife.getSurname());
         w.setPassNumber(wife.getPassNumber());
