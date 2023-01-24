@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Car/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Car/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Car_new/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Car_new/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Pro46/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Pro46/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Student/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Student/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/les3_11/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/les3_11/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/les3_12/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/les3_12/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/les_4_1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/les_4_1/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro47/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro47/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro48/src/main/java" charset="UTF-8" />
@@ -40,5 +48,6 @@
     <file url="file://$PROJECT_DIR$/pro5_9/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro6_1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro6_1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro6_2/src/main/java" charset="UTF-8" />
   </component>
 </project>

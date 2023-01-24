@@ -14,12 +14,12 @@ import java.util.Optional;
 public class PersonService {
     private final PersonRepo repo;
     private final MedicalCardRepo card_repo;
-    private final MedicalCardService service;
 
-    public PersonService(PersonRepo repo, MedicalCardRepo card_repo, MedicalCardService service) {
+
+    public PersonService(PersonRepo repo, MedicalCardRepo card_repo) {
         this.repo = repo;
         this.card_repo = card_repo;
-        this.service = service;
+
     }
 
 
