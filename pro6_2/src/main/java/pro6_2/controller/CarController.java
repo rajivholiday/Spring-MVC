@@ -6,18 +6,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_2.entity.Car;
 import pro6_2.service.CarService;
+import pro6_2.template.CarRequest;
 
 import java.util.List;
 
 @Controller
 @RequestMapping("/c")
 public class CarController {
-    private  final CarService service;
+    private final CarService service;
 
 
     public CarController(CarService service) {
         this.service = service;
     }
+
     @GetMapping
     public ResponseEntity<List<Car>> getAll() {
         return ResponseEntity.ok(service.getAll());
@@ -34,14 +36,14 @@ public class CarController {
         return new ResponseEntity<>("Entity was deleted", HttpStatus.OK);
     }
 
-    @PutMapping("/")
-    public ResponseEntity<String> update(@RequestBody Car car) {
-        service.update(car);
+    @PutMapping("/{id}")
+    public ResponseEntity<String> update(@PathVariable Integer id, @RequestBody CarRequest car) {
+        service.update(car, id);
         return new ResponseEntity<>("Entity was updated", HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Integer> create(@RequestBody Car car) {
+    public ResponseEntity<Integer> create(@RequestBody CarRequest car) {
         return new ResponseEntity<>(service.create(car), HttpStatus.CREATED);
     }
 }

@@ -35,6 +35,7 @@ public class DriverService {
     public void update(DriverRequest request, int id) { //
         Driver driver1 = getById(id).orElseThrow();
         Driver driver = setField(driver1, request);
+//        Driver drive2 = setField(getById(id).orElseThrow(), request); // this alone also works
         driverRepo.save(driver);
     }
 
@@ -50,7 +51,7 @@ public class DriverService {
     public Integer create(DriverRequest driver) {
         Driver newDriver = new Driver();
         Driver newestDriver = setField(newDriver, driver);
-//          Driver newestDriver = setField(new Driver(), driver);
+//          Driver newestDriver = setField(new Driver(), driver); // this alone also works
         return  driverRepo.save(newestDriver).getId();
 
     }
