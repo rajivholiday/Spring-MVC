@@ -12,12 +12,12 @@ import java.util.Optional;
 @Service
 public class CarService {
     private final CarRepo carRepo;
-    private final DriverRepo driverRepo;
 
 
-    public CarService(CarRepo carRepo, DriverRepo driverRepo) {
+
+    public CarService(CarRepo carRepo) {
         this.carRepo = carRepo;
-        this.driverRepo = driverRepo;
+
     }
 
     public List<Car> getAll() {
