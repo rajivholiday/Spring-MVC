@@ -1,4 +1,4 @@
-package pro6_2.template;
+package pro6_2.dto;
 
 import pro6_2.entity.Driver;
 

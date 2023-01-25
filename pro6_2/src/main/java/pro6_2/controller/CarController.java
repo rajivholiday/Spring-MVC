@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_2.entity.Car;
 import pro6_2.service.CarService;
-import pro6_2.template.CarRequest;
+import pro6_2.dto.CarRequest;
 
 import java.util.List;
 

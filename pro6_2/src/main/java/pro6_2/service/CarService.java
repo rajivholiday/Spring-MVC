@@ -3,8 +3,7 @@ package pro6_2.service;
 import org.springframework.stereotype.Service;
 import pro6_2.entity.Car;
 import pro6_2.repository.CarRepo;
-import pro6_2.repository.DriverRepo;
-import pro6_2.template.CarRequest;
+import pro6_2.dto.CarRequest;
 
 import java.util.List;
 import java.util.Optional;

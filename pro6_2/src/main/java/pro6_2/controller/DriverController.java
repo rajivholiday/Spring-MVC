@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_2.entity.Driver;
-import pro6_2.template.DriverRequest;
+import pro6_2.dto.DriverRequest;
 import pro6_2.service.DriverService;
 
 import java.util.List;

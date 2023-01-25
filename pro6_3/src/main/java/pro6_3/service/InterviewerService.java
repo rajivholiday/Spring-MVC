@@ -3,7 +3,7 @@ package pro6_3.service;
 import org.springframework.stereotype.Service;
 import pro6_3.entity.Interviewer;
 import pro6_3.repository.InterviewerRepo;
-import pro6_3.template.InterviewerRequest;
+import pro6_3.dto.InterviewerRequest;
 
 import java.util.List;
 import java.util.Optional;

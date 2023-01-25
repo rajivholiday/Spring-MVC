@@ -3,7 +3,7 @@ package pro6_3.service;
 import org.springframework.stereotype.Service;
 import pro6_3.entity.Applicant;
 import pro6_3.repository.ApplicantRepo;
-import pro6_3.template.ApplicantRequest;
+import pro6_3.dto.ApplicantRequest;
 
 import java.util.List;
 import java.util.Optional;

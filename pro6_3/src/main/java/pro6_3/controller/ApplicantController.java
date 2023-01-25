@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_3.entity.Applicant;
 import pro6_3.service.ApplicantService;
-import pro6_3.template.ApplicantRequest;
+import pro6_3.dto.ApplicantRequest;
 
 import java.util.List;
 
