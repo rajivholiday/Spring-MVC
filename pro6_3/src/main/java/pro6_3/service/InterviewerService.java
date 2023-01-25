@@ -29,7 +29,7 @@ public class InterviewerService {
     }
 
     public Integer create(InterviewerRequest request) {
-        return fieldSetter(new Interviewer(), request).getId();
+        return repo.save(fieldSetter(new Interviewer(), request)).getId();
 //        Interviewer interviewer_for_db = fieldSetter(new Interviewer(), request);
 //        return interviewer_for_db.getId();
     }

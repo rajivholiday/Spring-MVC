@@ -30,7 +30,7 @@ public class ApplicantService {
     }
 
     public Integer create(ApplicantRequest applicant) {
-        return fieldSetter(new Applicant(), applicant).getId();
+        return repo.save(fieldSetter(new Applicant(), applicant)).getId();
     }
 
     public void update(ApplicantRequest applicant, int id) {
