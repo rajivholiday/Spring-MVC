@@ -4,6 +4,6 @@ import pro6_3.entity.Interviewer;
 
 import java.util.Set;
 
-public record ApplicantRequest(Integer id, String name, String surname, String education,
+public record ApplicantRequest(String name, String surname, String education,
                                Integer age, Set<Interviewer> interviewers) {
 }

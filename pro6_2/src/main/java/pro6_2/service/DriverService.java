@@ -13,8 +13,6 @@ import java.util.Optional;
 public class DriverService {
     private final DriverRepo driverRepo;
 
-
-
     public DriverService(DriverRepo driverRepo) {
         this.driverRepo = driverRepo;
 
@@ -35,7 +33,7 @@ public class DriverService {
     public void update(DriverRequest request, int id) { //
         Driver driver1 = getById(id).orElseThrow();
         Driver driver = setField(driver1, request);
-//        Driver drive2 = setField(getById(id).orElseThrow(), request); // this alone also works
+//        Driver drive2 = setField(getById(id).orElseThrow(), request);
         driverRepo.save(driver);
     }
 
@@ -51,8 +49,8 @@ public class DriverService {
     public Integer create(DriverRequest driver) {
         Driver newDriver = new Driver();
         Driver newestDriver = setField(newDriver, driver);
-//          Driver newestDriver = setField(new Driver(), driver); // this alone also works
-        return  driverRepo.save(newestDriver).getId();
+//          Driver newestDriver = setField(new Driver(), driver);
+        return driverRepo.save(newestDriver).getId();
 
     }
 }

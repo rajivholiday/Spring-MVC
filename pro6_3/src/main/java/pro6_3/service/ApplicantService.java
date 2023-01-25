@@ -12,7 +12,6 @@ import java.util.Optional;
 public class ApplicantService {
     private final ApplicantRepo repo;
 
-
     public ApplicantService(ApplicantRepo repo) {
         this.repo = repo;
     }

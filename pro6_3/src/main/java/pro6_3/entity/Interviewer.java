@@ -20,7 +20,7 @@ public class Interviewer {
     @Column
     private String companyName;
 
-    @ManyToMany(targetEntity = Interviewer.class, mappedBy = "interviewers",
+    @ManyToMany(targetEntity = Applicant.class, mappedBy = "interviewers",
             cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Applicant> applicants;
 

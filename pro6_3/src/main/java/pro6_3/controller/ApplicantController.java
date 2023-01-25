@@ -15,7 +15,6 @@ import java.util.List;
 public class ApplicantController {
     private final ApplicantService service;
 
-
     public ApplicantController(ApplicantService service) {
         this.service = service;
     }
@@ -26,12 +25,12 @@ public class ApplicantController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Applicant> getById(@PathVariable int id) {
+    public ResponseEntity<Applicant> getById(@PathVariable Integer id) {
         return ResponseEntity.ok(service.getById(id).orElseThrow());
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> delete(@PathVariable int id) {
+    public ResponseEntity<String> delete(@PathVariable Integer id) {
         service.delete(id);
         return new ResponseEntity<>("Entity was deleted", HttpStatus.OK);
     }
@@ -42,7 +41,7 @@ public class ApplicantController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable int id, @RequestBody ApplicantRequest applicant) {
+    public ResponseEntity<String> update(@PathVariable Integer id, @RequestBody ApplicantRequest applicant) {
         service.update(applicant, id);
         return new ResponseEntity<>("Entity was updated", HttpStatus.OK);
     }

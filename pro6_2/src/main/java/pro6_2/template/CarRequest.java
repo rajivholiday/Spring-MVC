@@ -4,6 +4,6 @@ import pro6_2.entity.Driver;
 
 import java.util.Set;
 
-public record CarRequest(Integer id, String brand, String color, String engineType,
+public record CarRequest(String brand, String color, String engineType,
                          Integer mileage, Set<Driver> drivers) {
 }
