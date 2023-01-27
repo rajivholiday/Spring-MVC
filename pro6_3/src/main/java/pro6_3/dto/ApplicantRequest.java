@@ -1,4 +1,4 @@
-package pro6_3.template;
+package pro6_3.dto;
 
 import pro6_3.entity.Interviewer;
 

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_3.entity.Interviewer;
 import pro6_3.service.InterviewerService;
-import pro6_3.template.InterviewerRequest;
+import pro6_3.dto.InterviewerRequest;
 
 import java.util.List;
 
