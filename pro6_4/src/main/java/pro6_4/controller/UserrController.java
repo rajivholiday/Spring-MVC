@@ -36,7 +36,7 @@ public class UserrController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<Object> create(@RequestBody UserrLogin login) {
+    public ResponseEntity<Object> login(@RequestBody UserrLogin login) {
         Integer userId = service.login(login);
         return userId == null ? new ResponseEntity<>("Username or Password is wrong", HttpStatus.UNAUTHORIZED)
                 : ResponseEntity.ok(userId);
