@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.lang.annotation.Target;
 import java.util.Set;
 
 @Entity
@@ -23,7 +22,7 @@ public class Userr {
     @Column
     private String surname;
 
-    @ManyToMany(targetEntity = Game.class, mappedBy = "userrs", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(targetEntity = Game.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 
     private Set<Game> games;
 

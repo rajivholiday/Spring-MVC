@@ -49,9 +49,7 @@ public class UserrService {
         Userr user = repo.findByUsername(login.username()).orElseThrow(NotAuthorized::new);
         if (!BCrypt.checkpw(login.password(), user.getPassword())) {
             throw new NotAuthorized();
-
-
-//        return BCrypt.checkpw(login.password(), user.getPassword()) ? user.getId() : null;
+            //        return BCrypt.checkpw(login.password(), user.getPassword()) ? user.getId() : null;
         }
         return user.getId();
     }
