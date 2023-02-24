@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_2.entity.Driver;
-import pro6_2.dto.DriverRequest;
+import pro6_2.dto.DriverDto;
 import pro6_2.service.DriverService;
 
 import java.util.List;
@@ -37,13 +37,13 @@ public class DriverController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable Integer id, @RequestBody DriverRequest driver) {
+    public ResponseEntity<String> update(@PathVariable Integer id, @RequestBody DriverDto driver) {
         service.update(driver, id);
         return new ResponseEntity<>("Entity was updated", HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Integer> create(@RequestBody DriverRequest driver) {
+    public ResponseEntity<Integer> create(@RequestBody DriverDto driver) {
         return new ResponseEntity<>(service.create(driver), HttpStatus.CREATED);
     }
 }

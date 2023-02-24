@@ -1,7 +1,6 @@
 package com.example.pro5_10.controller;
 
 import com.example.pro5_10.entity.Person;
-import com.example.pro5_10.entity.PersonRecord;
 import com.example.pro5_10.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,7 +34,7 @@ public class PersonController {
     }
 
     @PostMapping("/2")
-    public ResponseEntity<Integer> create(@RequestBody PersonRecord person) {
+    public ResponseEntity<Integer> create(@RequestBody PersonDto person) {
         return new ResponseEntity<>(service.create2(person), HttpStatus.CREATED);
     }
 

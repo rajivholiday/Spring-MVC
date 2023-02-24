@@ -69,6 +69,5 @@ public class MercedesService implements CarDao<Mercedes> {
                 cars.remove(car);
                 break;
             }
-
     }
 }

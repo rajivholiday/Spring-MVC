@@ -1,8 +1,8 @@
 package com.example.pro5_10.service;
 
+import com.example.pro5_10.dto.PersonDto;
 import com.example.pro5_10.entity.MedicalCard;
 import com.example.pro5_10.entity.Person;
-import com.example.pro5_10.entity.PersonRecord;
 import com.example.pro5_10.repository.MedicalCardRepo;
 import com.example.pro5_10.repository.PersonRepo;
 import org.springframework.stereotype.Service;
@@ -43,7 +43,7 @@ public class PersonService {
         return repo.save(person).getId();
     }
 
-    public Integer create2(PersonRecord person) {
+    public Integer create2(PersonDto person) {
         Person p = new Person();
         p.setName(person.name());
         p.setSurname(person.surname());

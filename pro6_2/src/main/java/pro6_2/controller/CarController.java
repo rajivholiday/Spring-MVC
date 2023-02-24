@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import pro6_2.entity.Car;
 import pro6_2.service.CarService;
-import pro6_2.dto.CarRequest;
+import pro6_2.dto.CarDto;
 
 import java.util.List;
 
@@ -37,13 +37,13 @@ public class CarController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> update(@PathVariable Integer id, @RequestBody CarRequest car) {
+    public ResponseEntity<String> update(@PathVariable Integer id, @RequestBody CarDto car) {
         service.update(car, id);
         return new ResponseEntity<>("Entity was updated", HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Integer> create(@RequestBody CarRequest car) {
+    public ResponseEntity<Integer> create(@RequestBody CarDto car) {
         return new ResponseEntity<>(service.create(car), HttpStatus.CREATED);
     }
 }

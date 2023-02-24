@@ -2,7 +2,7 @@ package pro6_2.service;
 
 import org.springframework.stereotype.Service;
 import pro6_2.entity.Driver;
-import pro6_2.dto.DriverRequest;
+import pro6_2.dto.DriverDto;
 import pro6_2.repository.DriverRepo;
 
 import java.util.List;
@@ -29,14 +29,14 @@ public class DriverService {
         driverRepo.deleteById(id);
     }
 
-    public void update(DriverRequest request, int id) { //
+    public void update(DriverDto request, int id) { //
         Driver driver1 = getById(id).orElseThrow();
         Driver driver = setField(driver1, request);
 //        Driver drive2 = setField(getById(id).orElseThrow(), request);
         driverRepo.save(driver);
     }
 
-    private Driver setField(Driver db_driver, DriverRequest request) {
+    private Driver setField(Driver db_driver, DriverDto request) {
         db_driver.setName(request.name());
         db_driver.setSurname(request.surname());
         db_driver.setBirthYear(request.birthYear());
@@ -45,7 +45,7 @@ public class DriverService {
         return db_driver;
     }
 
-    public Integer create(DriverRequest driver) {
+    public Integer create(DriverDto driver) {
         Driver newDriver = new Driver();
         Driver newestDriver = setField(newDriver, driver);
 //          Driver newestDriver = setField(new Driver(), driver);

@@ -3,7 +3,7 @@ package pro6_2.service;
 import org.springframework.stereotype.Service;
 import pro6_2.entity.Car;
 import pro6_2.repository.CarRepo;
-import pro6_2.dto.CarRequest;
+import pro6_2.dto.CarDto;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,11 +31,11 @@ public class CarService {
         carRepo.deleteById(id);
     }
 
-    public void update(CarRequest request, int id) {
+    public void update(CarDto request, int id) {
         setField((getById(id).orElseThrow()), request);
     }
 
-    private Car setField(Car car_in_DB, CarRequest request) {
+    private Car setField(Car car_in_DB, CarDto request) {
         car_in_DB.setBrand(request.brand());
         car_in_DB.setColor(request.color());
         car_in_DB.setEngineType(request.engineType());
@@ -45,7 +45,7 @@ public class CarService {
         return car_in_DB;
     }
 
-    public int create(CarRequest car) {
+    public int create(CarDto car) {
 //        Car car_for_Db = setField(new Car(), car);
 //        return car_for_Db.getId();
         return carRepo.save(setField(new Car(), car)).getId();
