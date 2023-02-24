@@ -14,10 +14,10 @@
         <module name="pro6_2" />
         <module name="pro5_4" />
         <module name="pro6_3" />
-        <module name="pro5_5" />
         <module name="pro6_4" />
-        <module name="pro5_6" />
+        <module name="pro5_5" />
         <module name="pro6_5" />
+        <module name="pro5_6" />
         <module name="SpringBoot" />
         <module name="pro4_12" />
         <module name="pro4_11" />
@@ -27,15 +27,15 @@
         <module name="les3_11" />
         <module name="Student" />
         <module name="pro49" />
-        <module name="pro48" />
         <module name="pro5_10" />
+        <module name="pro48" />
         <module name="Car_new" />
-        <module name="pro47" />
         <module name="pro5_11" />
+        <module name="pro47" />
         <module name="Car" />
         <module name="pro5_7" />
-        <module name="pro5_9" />
         <module name="les_4_1" />
+        <module name="pro5_9" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

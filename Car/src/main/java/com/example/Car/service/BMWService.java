@@ -22,17 +22,14 @@ public class BMWService implements DAO<BMW> {
             if (car.getRegNumber() == regNumber) {
                 return car;
             }
-        return  null;
+        return null;
     }
 
     @Override
     public BMW update(int regNumber, String color, String engineType, long mileage) {
         for (BMW car : cars)
             if (car.getRegNumber() == regNumber) {
-                car.setColor(color);
-                car.setEngineType(engineType);
-                car.setMileage(mileage);
-                return car;
+                return fillCar(regNumber, color, engineType, mileage, car);
             }
         return null;
     }
