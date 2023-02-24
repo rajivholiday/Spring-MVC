@@ -31,10 +31,7 @@ public class VolvoService implements DAO<Volvo> {
     public Volvo update(int regNumber, String color, String engineType, long mileage) {
         for (Volvo car : cars)
             if (car.getRegNumber() == regNumber) {
-                car.setColor(color);
-                car.setColor(engineType);
-                car.setMileage(mileage);
-                return car;
+                return fillCar(regNumber, color, engineType, mileage, car);
             }
         return null;
     }

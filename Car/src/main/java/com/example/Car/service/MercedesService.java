@@ -30,10 +30,7 @@ public class MercedesService implements DAO<Mercedes> {
     public Mercedes update(int regNumber, String color, String engineType, long mileage) {
         for (Mercedes car : cars)
             if (car.getRegNumber() == regNumber) {
-                car.setColor(color);
-                car.setEngineType(engineType);
-                car.setMileage(mileage);
-                return car;
+                return fillCar(regNumber, color, engineType, mileage, car);
             }
         return null;
     }
